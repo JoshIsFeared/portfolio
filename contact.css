@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+  background-color: black;
+}
+
+.text-hover-effect {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.text-hover-effect a {
+  cursor: pointer;
+}
+
+.text-hover-effect a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #950101, #ff0000);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  border-radius: 3px;
+  box-shadow: 0 0 5px #950101, 0 0 10px #ff0000;
+}
+
+.text-hover-effect a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-title {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.text-select-effect {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.text-select-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #950101, #ff0000);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  border-radius: 3px;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  box-shadow: 0 0 5px #950101, 0 0 10px #ff0000;
+  transition: all 0.3s ease;
+}
+
+#sticky {
+  position: fixed;
+  text-align: center;
+  width: 20%;
+  top: 10px;
+  left: 40%;
+  margin: auto;
+  z-index: 1;
+  backdrop-filter: blur(5px) saturate(100%);
+  -webkit-backdrop-filter: blur(5px) saturate(100%);
+  background-color: rgba(0, 0, 0, 0.30);
+  border-radius: 12px;
+}
+
+
+#home, #about, #projects, #contact {
+  margin: 5px 10px 7px 10px;
+}
+
+#home-title, #projects-title, #about-title {
+  color: #424242;
+}
+
+#home a:hover, #projects a:hover, #about a:hover {
+  color: #cfcfcf;
+  transition:all 0.3s ease;
+}

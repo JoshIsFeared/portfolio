@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+  background-color: black;
+}
+
+.text-hover-effect {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.text-hover-effect a {
+  cursor: pointer;
+}
+
+.text-hover-effect a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #950101, #ff0000);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  border-radius: 3px;
+  box-shadow: 0 0 5px #950101, 0 0 10px #ff0000;
+}
+
+.text-hover-effect a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-title {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.text-select-effect {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.text-select-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #950101, #ff0000);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  border-radius: 3px;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  box-shadow: 0 0 5px #950101, 0 0 10px #ff0000;
+  transition: all 0.3s ease;
+}
+
+#sticky {
+  position: fixed;
+  text-align: center;
+  width: 20%;
+  top: 10px;
+  left: 40%;
+  margin: auto;
+  z-index: 1;
+  backdrop-filter: blur(5px) saturate(100%);
+  -webkit-backdrop-filter: blur(5px) saturate(100%);
+  background-color: rgba(0, 0, 0, 0.30);
+  border-radius: 12px;
+}
+
+
+#home, #about, #projects, #contact {
+  margin: 5px 10px 7px 10px;
+}
+
+#home-title, #projects-title, #contact-title {
+  color: #424242;
+}
+
+#home a:hover, #projects a:hover, #contact a:hover {
+  color: #cfcfcf;
+  transition:all 0.3s ease;
+}
+
+#header {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 100px;
+  top: 10px;
+  cursor: default;
+}
+
+.base-text {
+  color: #cfcfcf;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  cursor: default;
+}
+
+#name {
+  color: #950101;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  cursor: default;
+}
+
+#main {
+  display: block;
+  position: relative;
+  left: 4%;
+  width: 40%;
+  height: 2000px;
+  margin: auto;
+}
+
+#skills {
+  position: relative;
+  background-color: black;
+  width: 50%;
+  height: 200px;
+  left: 50%;
+  bottom: 113px;
+}
+
+#skills-title {
+  display: inline-block;
+  position: relative;
+  color: #cfcfcf;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  cursor: default;
+}
+
+#html {
+  display: inline-block;
+  position: relative;
+  bottom: 9px;
+  right: 10px;
+  color: #797979;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  cursor: default;
+}
+
+#css {
+  display: inline-block;
+  position: relative;
+  bottom: 9px;
+  right: 12px;
+  color: #797979;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  cursor: default;
+}
+
+.skill-block {
+  position: relative;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.skill-block:hover {
+  background-color: #2d0000;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.skill-block:hover #html{
+  color: #cfcfcf;
+  transition: all 0.3s ease;
+  transition-delay: 0.2s;
+}
+
+.skill-block:hover #css{
+  color: #cfcfcf;
+  transition: all 0.3s ease;
+  transition-delay: 0.2s;
+}
+
+.html-logo {
+  position: absolute;
+  height: 20px;
+  width: 25px;
+  bottom: 4px;
+  left: 60px;
+}
+
+.html-logo.hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.html-logo.default {
+  opacity: 1;
+  z-index: 1;
+}
+
+#html-block:hover .html-logo.default {
+  opacity: 1;
+}
+
+#html-block:hover .html-logo.hover {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+.css-logo {
+  position: absolute;
+  height: 24px;
+  width: 27px;
+  bottom: 2px;
+  left: 40px;
+}
+
+.css-logo.hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.css-logo.default {
+  opacity: 1;
+  z-index: 1;
+}
+
+#css-block:hover .css-logo.default {
+  opacity: 1;
+}
+
+#css-block:hover .css-logo.hover {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+#css-block {
+  position: relative;
+  bottom: 40px;
+  left: 90px;
+  width: 70px;
+}
+
+#html-block {
+  bottom: 10px;
+}
+
+#info {
+  position: relative;
+  height: 130px;
+  width: 250px;
+  bottom: 200px;
+  background-color: black;
+}
+
+#location {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: 40px;
+  left: 30px;
+}
+
+#location-icon {
+  position: relative;
+  height: 25px;
+  width: 25px;
+}
+
+#location-title {
+  position: relative;
+
+  height: 25px;
+  top: 10px;
+  cursor: default;
+}
+
+#age {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: 39.5px;
+  left: 30px;
+}
+
+#age-icon {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  left: 1.5px;
+}
+
+#age-title {
+  position: relative;
+
+  height: 25px;
+  top: 16px;
+  cursor: default;
+}
+
+#source {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: 39.5px;
+  left: 30px;
+}
+
+#source-icon {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  left: 1.5px;
+}
+
+#source-title {
+  position: relative;
+ 
+  height: 25px;
+  top: 18px;
+  cursor: default;
+}
+
+#calendar {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: 39.5px;
+  left: 30px;
+}
+
+#calendar-icon {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  left: 1.5px;
+}
+
+#calendar-title {
+  position: relative;
+
+  height: 25px;
+  top: 20px;
+  cursor: default;
+}
+
+#about-1 {
+  position: relative;
+  background-color: black;
+  height: 110px;
+  width: 330px;
+  bottom: 200px;
+}
+
+#desc {
+  position: relative;
+  color: #cfcfcf;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500
+}
+
+#numbers {
+  position: relative;
+
+  width: 100%;
+  height: 200px;
+  bottom: 260px;
+}
+
+#time {
+  position: relative;
+
+  width: 200px;
+  height: 100px;
+  top: 25px;
+}
+
+#time-title {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: 50px;
+}
+
+#number-1 {
+  position: relative;
+  color: #ff0000;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+#amount-projects {
+  position: relative;
+
+  width: 200px;
+  height: 100px;
+  bottom: 125px;
+  left: 200px;
+}
+
+#amount-projects-title {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: 50px;
+}
+
+#number-2 {
+  position: relative;
+  color: #ff0000;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+#study-time {
+  position: relative;
+
+  width: 200px;
+  height: 100px;
+  bottom: 275px;
+  left: 400px;
+}
+
+#study-time-title {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: 50px;
+}
+
+#number-3 {
+  position: relative;
+  color: #ff0000;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+#courses {
+  position: relative;
+
+  width: 200px;
+  height: 100px;
+  bottom: 425px;
+  left: 600px;
+}
+
+#courses-title {
+  position: relative;
+  color: #424242;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  bottom: 50px;
+}
+
+#number-4 {
+  position: relative;
+  color: #ff0000;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+}
